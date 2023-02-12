@@ -1,0 +1,38 @@
+@import "config";
+@import "steps";
+@import "personalInfo";
+@import "addOns";
+@import "plan";
+@import "summary";
+@import "thanks";
+
+body {
+    background-color: $magnolia;
+    color: $marine-blue;
+    font-family: $main-font;
+    font-size: $main-font-size;
+    font-weight: $main-font-regular;
+
+    @media (min-width: 768px) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        height: 100dvh;
+    }
+}
+
+.App {
+    background-color: $white;
+
+    @media (min-width: 768px) {
+        width: 500px;
+    }
+
+    @media (min-width: 1200px) {
+        display: flex;
+        align-items: center;
+        padding: 1rem;
+        width: 900px;
+    }
+}

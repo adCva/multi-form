@@ -1,0 +1,10 @@
+.steps-container {
+    background-image: url(../Assets/bg-sidebar-mobile.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @media (min-width: 1200px) {
+        background-image: url(../Assets/bg-sidebar-desktop.svg);
+    }
+}
