@@ -8,10 +8,12 @@ export const stepsSlice = createSlice({
     },
     reducers: {
         goForward: (state, action) => {
-            state.currentStep = action.payload
+            let newStep = state.currentStep + 1;
+            state.currentStep = newStep === 5 ? 5 : newStep;
         },
         goBackwards: (state, action) => {
-            state.currentStep = action.payload
+            let newStep = state.currentStep - 1;
+            state.currentStep = newStep === 1 ? 1 : newStep;
         },
         goToSpecificStep: (state, action) => {
             state.currentStep = action.payload;

@@ -1,55 +1,57 @@
 import React, { useState } from 'react';
-// Redux.
-import { useSelector, useDispatch } from 'react-redux';
-import { goForward, goBackwards } from "../Redux/stepsSlice";
 
 function Plan() {
-  const dispatch = useDispatch();
-  const isChangeActive = useSelector((state) => state.step.isChangeActive);
+    const [planType, setPlanType] = useState(1);
+    const [planDuration, setPlanDuration] = useState('monthly');
+
+    const planDurationChange = () => {
+        setPlanDuration(planDuration === "monthly" ? "yearly" : "monthly");
+    }
+
+
+    const planTypeChange = (type) => {
+        setPlanType(type);
+    }
+     
+
 
   return (
-    <div className='plan-container'>
+    <div className='form-details'>
       <h1>Select your plan</h1>
       <p>You have the option of monthly or yearly billing.</p>
-      <div className='plans-details-container'>
-
-        <div className='plan-card'>
+      <div className={planType === 1 ? "form-group-two form-group-two-active" : "form-group-two"} onClick={() => planTypeChange(1)}>
           <img src="./images/icon-arcade.svg" alt="Arcade" loading='lazy'/>
           <div className='plan-info'>
-            <h5>Arcade</h5>
-            <p>$9/mo</p>
-            <h6>2 months free</h6>
+              <h5>Arcade</h5>
+              <p>$9/mo</p>
+              <h6 className={planDuration === 'monthly' ? "offer-hide" : "offer"}>2 months free</h6>
           </div>
-        </div>
+      </div>
 
-        <div className='plan-card'>
+      <div className={planType === 2 ? "form-group-two form-group-two-active" : "form-group-two"} onClick={() => planTypeChange(2)}>
           <img src="./images/icon-advanced.svg" alt="Advanced" loading='lazy'/>
           <div className='plan-info'>
-            <h5>Advanced</h5>
-            <p>$12/mo</p>
-            <h6>2 months free</h6>
+              <h5>Advanced</h5>
+              <p>$12/mo</p>
+              <h6 className={planDuration === 'monthly' ? "offer-hide" : "offer"}>2 months free</h6>
           </div>
-        </div>
+      </div>
 
-        <div className='plan-card'>
+      <div className={planType === 3 ? "form-group-two form-group-two-active" : "form-group-two"} onClick={() => planTypeChange(3)}>
           <img src="./images/icon-pro.svg" alt="Pro" loading='lazy'/>
           <div className='plan-info'>
-            <h5>Pro</h5>
-            <p>$15/mo</p>
-            <h6>2 months free</h6>
+              <h5>Pro</h5>
+              <p>$15/mo</p>
+              <h6 className={planDuration === 'monthly' ? "offer-hide" : "offer"}>2 months free</h6>
           </div>
-        </div>
-
-        <div className='slider-container'>
-          <h6>Monthly</h6>
-          <button>X</button>
-          <h6>Yearly</h6>
-        </div>
-
       </div>
-      <div className='direction-buttons'>
-        <button onClick={isChangeActive ? () => dispatch(goBackwards(4)) : () => dispatch(goBackwards(1))}>{isChangeActive ? "Discard" : "Go Back"}</button>
-        <button onClick={isChangeActive ? () => dispatch(goForward(4)) : () => dispatch(goForward(3))}>{isChangeActive ? "Update" : "Next Step"}</button>
+
+      <div className='slider-container'>
+          <h6 className={planDuration === 'monthly' ? "plan-type-bold" : "plan-type-simple"}>Monthly</h6>
+          <div className='plan-switcher' onClick={planDurationChange}>
+            <button className={planDuration === 'monthly' ? "switcher-ball switcher-ball-left" : "switcher-ball switcher-ball-right"}></button>
+          </div>
+          <h6 className={planDuration === 'yearly' ? "plan-type-bold" : "plan-type-simple"}>Yearly</h6>
       </div>
     </div>
   )

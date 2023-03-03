@@ -4,14 +4,12 @@ export const dataSlice = createSlice({
     name: "data Slice",
     initialState: {
         personalInfo: {
-
+            name: "",
+            email: "",
+            phone: ""
         },
-        plan: {
-
-        },
-        addOns: {
-
-        },
+        planType: 'monthly',
+        addOns: [],
         subscriptionTypeYearly: false
     },
 

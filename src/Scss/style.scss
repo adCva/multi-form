@@ -1,10 +1,8 @@
 @import "config";
 @import "steps";
-@import "personalInfo";
+@import "form";
 @import "addOns";
-@import "plan";
-@import "summary";
-@import "thanks";
+
 
 body {
     background-color: $magnolia;
@@ -22,8 +20,15 @@ body {
     }
 }
 
+
+.App {
+    background-color: $magnolia;
+}
+
+/*
 .App {
     background-color: $white;
+    position: relative;
 
     @media (min-width: 768px) {
         width: 500px;
@@ -41,3 +46,5 @@ body {
     background-color: #ffffff;
     margin: -2rem 1rem 0;
 }
+
+*/
