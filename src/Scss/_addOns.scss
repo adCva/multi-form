@@ -1,0 +1,66 @@
+.addon-form-group {
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid $light-gray;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    padding: 0.6rem 0.8rem;
+    cursor: pointer;
+    transition: all 0.25s ease-in-out;
+
+
+    .addon-left-group {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+
+        .addon-btn {
+            background: transparent;
+            height: 22px;
+            width: 22px;
+            border: 1px solid $light-gray;
+            border-radius: 5px;
+            transition: all 0.25s ease-in-out;
+        }
+
+        .addon-checked {
+            background-color: $purplish-blue;
+            border: 1px solid $purplish-blue;
+            color: $white;
+
+            &::after {
+                content: '\2713';
+            }
+        }
+
+        
+        .addon-info {
+            h6 {
+                font-size: 0.9rem;
+                font-weight: $main-font-bold;
+                letter-spacing: 0.5px;
+                margin-bottom: 0.2rem;
+            }
+
+            p {
+                all: unset;
+                color: $cool-gray;
+                font-size: 0.85rem;
+            }
+        }
+    }
+
+    .addon-price {
+        color: $purplish-blue;
+        font-size: 0.9rem;
+    }
+}
+
+
+.addon-form-group-selected {
+    background-color: $alabaster;
+    border: 1px solid $purplish-blue;
+}

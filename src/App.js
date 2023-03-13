@@ -22,12 +22,14 @@ import { goForward, goBackwards } from "./Redux/stepsSlice";
       <div className='helper-wrapper'>
         <form className='form-container' onSubmit={handleSubmit}>
           {determineComponent(currentStep)}
+
           <div className={currentStep === 5 ? "buttons-wrapper-hide" : "buttons-wrapper"}>
             <div className='buttons-container'>
               <button className={currentStep === 1 ? "back-btn-hide" : "back-btn"} onClick={() => dispatch(goBackwards())}>Go Back</button>
               <button className='next-btn' onClick={() => dispatch(goForward())}>{currentStep === 4 ? "Confirm" : "Next Step"}</button>
             </div>
           </div>
+          
         </form>
       </div>
       

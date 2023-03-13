@@ -1,0 +1,88 @@
+.summary-contents {
+    background-color: #f8f9fc;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+
+    .review-group {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .plan-review {
+        border-bottom: 1px solid $light-gray;
+        padding-bottom: 1rem;
+
+        .plan-change {
+            h5 {
+                color: $marine-blue;
+                font-size: 0.95rem;
+                font-weight: $main-font-medium;
+                letter-spacing: 0.3px;
+            }
+
+            button {
+                background: transparent;
+                color: $cool-gray;
+                font-size: 0.95rem;
+                text-decoration: underline;
+                margin-top: 0.3rem;
+                cursor: pointer;
+                transition: all 0.25s ease-in-out;
+
+                &:hover {
+                    color: $purplish-blue;
+                }
+            }
+        }
+
+        h6 {
+            color: $marine-blue;
+            font-weight: $main-font-medium;
+            letter-spacing: 0.3px;
+        }
+    }
+
+
+    .addOn-review {
+        margin: 1rem 0;
+
+        h6 {
+            color: $cool-gray;
+            font-size: 0.9rem;
+            font-weight: $main-font-medium;
+        }
+
+        p {
+            all: unset;
+            color: $marine-blue;
+            font-size: 0.9rem;
+            font-weight: $main-font-medium;
+            letter-spacing: 0.3px;
+        }
+    }
+}
+
+
+.total-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+    
+    h6 {
+        color: $cool-gray;
+        font-size: 0.9rem;
+        font-weight: $main-font-medium;
+        margin-left: 1rem;
+    }
+
+    p {
+        color: $purplish-blue;
+        font-size: 1.1rem;
+        font-weight: $main-font-bold;
+        letter-spacing: 0.3px;
+        margin-right: 1rem;
+    }
+}

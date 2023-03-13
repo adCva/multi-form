@@ -1,0 +1,21 @@
+.thanks-container {
+    text-align: center;
+    padding: 2rem 0;
+
+    img {
+        width: 60px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+        font-weight: $main-font-bold;
+        margin: 1.5rem 0 1rem;
+        letter-spacing: 0.3px;
+    }
+
+    p {
+        color: $cool-gray;
+        line-height: 1.5;
+        letter-spacing: 0.5px;
+    }
+}

@@ -2,6 +2,10 @@
 @import "steps";
 @import "form";
 @import "addOns";
+@import "personalInfo";
+@import "summary";
+@import "plan";
+@import "thanks";
 
 
 body {
@@ -23,6 +27,20 @@ body {
 
 .App {
     background-color: $magnolia;
+
+    @media (min-width: 768px) {
+        width: 550px;
+        height: 730px;
+        background-color: $white;
+        padding: 1.3rem;   
+        border-radius: 10px;
+    }
+
+    @media (min-width: 1200px) {
+        display: flex;
+        width: 1000px; 
+        height: 550px;
+    }
 }
 
 /*

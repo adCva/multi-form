@@ -1,0 +1,26 @@
+.personal-form-group {
+    display: grid;
+    margin-bottom: 1rem;
+
+    label {
+        font-size: 0.8rem;
+        letter-spacing: 0.3px;
+        margin-bottom: 0.3rem;
+    }
+
+    input {
+        background: transparent;
+        color: $cool-gray;
+        font-weight: $main-font-medium;
+        letter-spacing: 0.3px;
+        padding: 0.7rem;
+        border: 1px solid $light-gray;
+        border-radius: 5px;
+        outline: none;
+        transition: all 0.25s ease-in-out;
+
+        &:focus {
+            border: 1px solid $purplish-blue;
+        }
+    }
+}

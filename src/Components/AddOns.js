@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 function AddOns() {
-    const [addOns, setAddOns] = useState(['online', 'storage', 'profile']);
+    const [addOns, setAddOns] = useState([]);
 
 
     const selectAddOn = (el) => {
@@ -19,38 +19,54 @@ function AddOns() {
 
     return (
         <div className='form-details'>
-            <h1>Pick add-ons</h1>
-            <p>Add-ons help enhance your gaming experience.</p>
-            <div className='form-group'>
-                <div className='addon-group'>
-                    <input type="checkbox" onChange={() => selectAddOn('online')} />
+            <h1 className='title'>Pick add-ons</h1>
+            <p className='desc'>Add-ons help enhance your gaming experience.</p>
+
+            <div className={addOns.includes('online') ? 'addon-form-group addon-form-group-selected' : 'addon-form-group'} onClick={() => selectAddOn("online")}>
+                <div className='addon-left-group'>
+                    {addOns.includes('online') ? (
+                        <button className='addon-btn addon-checked'></button>
+                    ) : (
+                        <button className='addon-btn'></button>
+                    )}
                     <div className='addon-info'>
-                        <h2>Online service</h2>
+                        <h6>Online service</h6>
                         <p>Access to multiplayer games</p>
                     </div>
                 </div>
-                <p>+$1/mo</p>
+                <p className='addon-price'>+$1/mo</p>
             </div>
-            <div className='form-group'>
-                <div className='addon-group'>
-                    <input type="checkbox" onChange={() => selectAddOn('storage')} />
+
+            <div className={addOns.includes('storage') ? 'addon-form-group addon-form-group-selected' : 'addon-form-group'} onClick={() => selectAddOn("storage")}>
+                <div className='addon-left-group'>
+                    {addOns.includes('storage') ? (
+                        <button className='addon-btn addon-checked'></button>
+                    ) : (
+                        <button className='addon-btn'></button>
+                    )}
                     <div className='addon-info'>
-                        <h2>Larger storage</h2>
+                        <h6>Larger storage</h6>
                         <p>Extra 1TB of cloud save</p>
                     </div>
                 </div>
-                <p>+$2/mo</p>
+                <p className='addon-price'>+$2/mo</p>
             </div>
-            <div className='form-group'>
-                <div className='addon-group'>
-                    <input type="checkbox" onChange={() => selectAddOn('profile')} />
+
+            <div className={addOns.includes('profile') ? 'addon-form-group addon-form-group-selected' : 'addon-form-group'} onClick={() => selectAddOn("profile")}>
+                <div className='addon-left-group'>
+                    {addOns.includes('profile') ? (
+                        <button className='addon-btn addon-checked'></button>
+                    ) : (
+                        <button className='addon-btn'></button>
+                    )}
                     <div className='addon-info'>
-                        <h2>Customizable profile</h2>
+                        <h6>Customizable profile</h6>
                         <p>Custom theme on your profile</p>
                     </div>
                 </div>
-                <p>+$2/mo</p>
+                <p className='addon-price'>+$2/mo</p>
             </div>
+            
         </div>
     )
 }

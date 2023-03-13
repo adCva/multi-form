@@ -17,9 +17,10 @@ function Plan() {
 
   return (
     <div className='form-details'>
-      <h1>Select your plan</h1>
-      <p>You have the option of monthly or yearly billing.</p>
-      <div className={planType === 1 ? "form-group-two form-group-two-active" : "form-group-two"} onClick={() => planTypeChange(1)}>
+      <h1 className='title'>Select your plan</h1>
+      <p className='desc'>You have the option of monthly or yearly billing.</p>
+
+      <div className={planType === 1 ? "plan-form-group plan-form-group-active" : "plan-form-group"} onClick={() => planTypeChange(1)}>
           <img src="./images/icon-arcade.svg" alt="Arcade" loading='lazy'/>
           <div className='plan-info'>
               <h5>Arcade</h5>
@@ -28,7 +29,7 @@ function Plan() {
           </div>
       </div>
 
-      <div className={planType === 2 ? "form-group-two form-group-two-active" : "form-group-two"} onClick={() => planTypeChange(2)}>
+      <div className={planType === 2 ? "plan-form-group plan-form-group-active" : "plan-form-group"} onClick={() => planTypeChange(2)}>
           <img src="./images/icon-advanced.svg" alt="Advanced" loading='lazy'/>
           <div className='plan-info'>
               <h5>Advanced</h5>
@@ -37,7 +38,7 @@ function Plan() {
           </div>
       </div>
 
-      <div className={planType === 3 ? "form-group-two form-group-two-active" : "form-group-two"} onClick={() => planTypeChange(3)}>
+      <div className={planType === 3 ? "plan-form-group plan-form-group-active" : "plan-form-group"} onClick={() => planTypeChange(3)}>
           <img src="./images/icon-pro.svg" alt="Pro" loading='lazy'/>
           <div className='plan-info'>
               <h5>Pro</h5>
